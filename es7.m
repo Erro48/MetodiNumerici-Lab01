@@ -1,6 +1,10 @@
 clear all
 clc
 
+angles = [ 1 pi/4 pi pi*3/4 ];
+colors = [ 'r' 'g' 'b' 'p' ];
+hold on
+
 % a)
 P = [
     -6 -6 -7 0 7 6 6 -3 -3 0 0 -6;
@@ -9,4 +13,7 @@ P = [
 
 x = P(1,:);
 y = P(2,:);
-plot(x,y)
+
+for i=1:length(angles)
+    plot(x,y,colors(i))
+end
